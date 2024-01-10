@@ -10,7 +10,7 @@ const genAI = new GoogleGenerativeAI(key)
 // For text-only input, use the gemini-pro model
 const model = genAI.getGenerativeModel({ model: 'gemini-pro' })
 
-async function run() {
+async function main() {
   console.time()
   const prompt = 'Write a story about a magic backpack.'
   const result = await model.generateContent(prompt)
@@ -33,4 +33,4 @@ async function run() {
   */
 }
 
-run()
+main()
